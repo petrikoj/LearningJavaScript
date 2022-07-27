@@ -217,3 +217,29 @@ function nameLongestWord(str) {
 console.log(
   nameLongestWord("Der Geschmack ist das längste Wort dieses Satzes.")
 );
+
+// EPIC 2: DOM MANIPULATION
+
+// EXERCISE 17
+
+function addBands(myBandList) {
+  for (let i = 0; i < myBandList.length; i++) {
+    let listItem = document.createElement("li");
+    let bandNames = document.createTextNode(myBandList[i]);
+    listItem.appendChild(bandNames);
+    document.getElementById("band-list").appendChild(listItem);
+  }
+}
+
+addBands(["The Radio Dept.", "Four Tet", "Black Marble", "Bloc Party"]);
+
+// EXERCISE 18
+
+/*function addMultTable(rows, cols) {
+  let table = document.createElement("table");
+  let tableRows = document.createElement("tr");
+  let tableCols = document.createElement("col");
+  document.querySelector("body").appendChild(table);
+}
+
+addMultTable(4, 8); */
