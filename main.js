@@ -62,7 +62,14 @@ while (i < ageArray.length) {
 
 // using while loop to print only even numbers
 
-// SKIPPED :'-(
+while (i < ageArray.length) {
+  console.log(ageArray[i]);
+  i++;
+}
+for (let i = 0; i < ageArray.length; i++)
+  if (ageArray[i] % 2 === 0) {
+    console.log(ageArray[i]);
+  }
 
 // using a for loop to print only even numbers
 
@@ -235,11 +242,22 @@ addBands(["The Radio Dept.", "Four Tet", "Black Marble", "Bloc Party"]);
 
 // EXERCISE 18
 
-/*function addMultTable(rows, cols) {
-  let table = document.createElement("table");
-  let tableRows = document.createElement("tr");
-  let tableCols = document.createElement("col");
-  document.querySelector("body").appendChild(table);
+function addMultTable(rows, cols) {
+  const tableContainer = document.getElementById("table");
+
+  const table = document.createElement("table");
+
+  for (let i = 0; i < rows; i++) {
+    const rows = document.createElement("tr");
+    table.appendChild(rows);
+
+    for (let x = 0; x < cols; x++) {
+      const cols = document.createElement("td");
+      // cols.innerHTML = x + 1;
+      rows.appendChild(cols);
+    }
+  }
+  tableContainer.appendChild(table);
 }
 
-addMultTable(4, 8); */
+addMultTable(4, 8);
