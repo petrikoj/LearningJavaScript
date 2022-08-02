@@ -247,16 +247,19 @@ function addMultTable(rows, cols) {
 
   const table = document.createElement("table");
 
+  // create rows
   for (let i = 0; i < rows; i++) {
     const rows = document.createElement("tr");
     table.appendChild(rows);
-
+    // Create columns
     for (let x = 0; x < cols; x++) {
-      const cols = document.createElement("td");
-      // cols.innerHTML = x + 1;
-      rows.appendChild(cols);
+      const col = document.createElement("td");
+      col.innerHTML = x + 1;
+
+      rows.appendChild(col);
     }
   }
+
   tableContainer.appendChild(table);
 }
 
